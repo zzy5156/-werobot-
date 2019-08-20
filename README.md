@@ -8,3 +8,9 @@
 定时发送的代码参考https://www.cnblogs.com/supery007/p/8136295.html
 
 关键字回复的代码参考https://www.jianshu.com/p/1ec2ad95f599
+
+autoreply.py为关键字回复
+
+caiyun.py为定时发送
+
+可根据实际需求选择其中一个或同时运行
