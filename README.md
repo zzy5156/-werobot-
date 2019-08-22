@@ -9,6 +9,10 @@
 
 关键字回复的代码参考https://www.jianshu.com/p/1ec2ad95f599
 
+彩云个人api申请地址http://caiyunapp.com/
+
+心知个人api申请地址https://www.seniverse.com/
+
 autoreply.py为关键字回复
 
 caiyun.py为定时发送
