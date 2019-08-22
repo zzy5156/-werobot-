@@ -13,6 +13,9 @@
 
 心知个人api申请地址https://www.seniverse.com/
 
+简易教程https://www.coolapk.com/feed/13419174?shareKey=Njc5ZmZiYjc0ZTYzNWQ1ZTdjZDI~&shareUid=489818&shareFrom=com.coolapk.market_9.5-beta2
+
+
 autoreply.py为关键字回复
 
 caiyun.py为定时发送
