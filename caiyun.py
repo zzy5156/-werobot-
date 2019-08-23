@@ -86,7 +86,7 @@ while True:
     else: 
         now_data=self_realtime_data['result']['forecast_keypoint']
         nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        send_data="降雨预报：\n"+now_data+"\n更新于："+nowTime+"\n天气："+wea+"  "+n_tem+"℃\n最高/低温："+h_tem+"℃ /"+l_tem+"℃\n湿度："+hum+"\n"+win+"  "+win_speed+"  "+win_meter+"\n能见度："+visit+"\n空气质量："+air+"  "+air_level+"  "+air_tips+"\npm2.5："+pm25+"\n预警消息："+alarm+"\n数据来源：彩云天气、中国天气网"
+        send_data="降雨预报：\n"+now_data+"\n更新于："+nowTime+"\n天气："+wea+"  "+n_tem+"℃\n最高/低温："+h_tem+"℃ /"+l_tem+"℃\n湿度："+hum+"\n"+win+"  "+win_speed+"  "+win_meter+"\n能见度："+visit+"\n空气质量："+air+"  "+air_level+"  "+air_tips+"\npm2.5："+pm25+"\n预警消息："+alarm+"\n数据来源：彩云科技、中国天气网"
     if __name__ == '__main__':
         sendmsg('输入接收信息的微信号',send_data)
     time.sleep(second);
