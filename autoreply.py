@@ -13,15 +13,30 @@ robot=werobot.WeRoBot(token='ziyun')
 
 @robot.filter('天气')
 def weather():
-    json_text = requests.get(str.format("https://api.caiyunapp.com/v2/输入你的彩云天气api_token/输入经纬度/minutely.json")).content
+    json_text = requests.get(str.format("https://api.caiyunapp.com/v2/输入你的彩云api_token/输入经纬度/minutely.json")).content
     self_realtime_data = json.loads(json_text)
     status=self_realtime_data['status']
     if status!='failed':
         now_data=self_realtime_data['result']['forecast_keypoint']
         nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        send_data="降雨预报："+now_data+"\n更新于："+nowTime+"\n详情请访问www.caiyunapp.com/map"
+        send_data="降雨预报："+now_data+"\n更新于："+nowTime+"\n数据来源：彩云科技\n详情请访问www.caiyunapp.com/map"
     else:
         send_data="彩云API已经到配额上限，无法查询。\n可访问www.caiyunapp.com/map查看天气。"
+    return send_data
+
+@robot.filter('今天')
+def today():
+    nowTime=datetime.datetime.now().strftime('%Y%m%d')
+    json_text = requests.get(str.format("http://www.mxnzp.com/api/holiday/single/"+nowTime)).content
+    data = json.loads(json_text)
+    date=data['data']['date']
+    week=str(data['data']['weekDay'])
+    lunar=data['data']['lunarCalendar']
+    avoid=data['data']['avoid']
+    suit=data['data']['suit']
+    dayofyear=data['data']['dayOfYear']
+    weekofyear=data['data']['weekOfYear']
+    send_data="今天是"+date+" 星期"+week+"\n农历"+lunar+"\n宜："+suit+"\n忌："+avoid
     return send_data
 
 @robot.location
@@ -29,7 +44,7 @@ def place(message,location):
     place=message.location
     n_place=":".join([str(i) for i in place])
     print (n_place)
-    json_text = requests.get(str.format("https://api.seniverse.com/v3/weather/now.json?key=输入你的心知天气api_token&location="+n_place+"&language=zh-Hans&unit=c")).content
+    json_text = requests.get(str.format("https://api.seniverse.com/v3/weather/now.json?key=输入你的心知api_token&location="+n_place+"&language=zh-Hans&unit=c")).content
     r_data = json.loads(json_text)
     data=r_data['results'][0]
     wea=data['now']['text']
