@@ -36,7 +36,7 @@ def today():
     suit=data['data']['suit']
     dayofyear=data['data']['dayOfYear']
     weekofyear=data['data']['weekOfYear']
-    send_data="今天是"+date+" 星期"+week+"\n农历"+lunar+"\n宜："+suit+"\n忌："+avoid
+    send_data="今天是"+str(date)+" 星期"+str(week)+"\n农历"+str(lunar)+"\n宜："+str(suit)+"\n忌："+str(avoid)
     return send_data
 
 @robot.location
