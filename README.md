@@ -16,7 +16,9 @@
 简易教程https://www.coolapk.com/feed/13419174?shareKey=Njc5ZmZiYjc0ZTYzNWQ1ZTdjZDI~&shareUid=489818&shareFrom=com.coolapk.market_9.5-beta2
 
 
-autoreply.py为关键字回复
+autoreply.py为关键字回复,采用心知数据
+
+autoreply_1.py采用彩云科技数据，心知为备用数据源
 
 caiyun.py为定时发送
 
