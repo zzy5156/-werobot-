@@ -1,7 +1,7 @@
 # -README
-通过调用彩云科技api获取降水预报，并通过公众号发给用户
+基于werobot，通过调用彩云科技api获取降水预报，并通过公众号发给用户
 
-使用python3编写
+使用python2编写，已确认不兼容python3
 
 获取降水预报的代码参考https://github.com/jihao/colorfulclouds-hass
 
