@@ -61,7 +61,7 @@ def place(message,session):
     place_1 = ":".join([str(i) for i in place])
     place_2 = str(place[1]) + "," + str(place[0])
     print (place_2)
-        if 'last' in session:
+    if 'last' in session:
         print "has last"
     else:
         session['last'] = False
