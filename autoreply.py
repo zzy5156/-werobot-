@@ -61,6 +61,10 @@ def place(message,session):
     place_1 = ":".join([str(i) for i in place])
     place_2 = str(place[1]) + "," + str(place[0])
     print (place_2)
+        if 'last' in session:
+        print "has last"
+    else:
+        session['last'] = False
     if session['last'] == True:
         session['last'] = False
         # 记得更改此处的彩云天气令牌
