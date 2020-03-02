@@ -57,7 +57,7 @@ while True:
     json_text = requests.get(str.format("https://api.caiyunapp.com/v2/输入你的彩云天气api_token/输入经纬度，用英文逗号分隔/minutely.json")).content
     self_realtime_data = json.loads(json_text)
     status=self_realtime_data['status']
-    json_text=requests.get(str.format("https://www.tianqiapi.com/api/?version=v6&city=输入城市名")).content
+    json_text=requests.get(str.format("https://www.tianqiapi.com/api/?version=v6&appid=输入你的tianqiqpi控制台显示的appid&appsecret=输入你的tianqiapi控制台显示的appsecret&city=输入城市名")).content
     data = json.loads(json_text)
     cityid=data['cityid']
     city=data['city']
