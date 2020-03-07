@@ -18,7 +18,7 @@
 
 autoreply.py为关键字回复,采用心知数据（已弃用，最新版本是在autoreply_1.py的基础上新增功能）
 
-autoreply_1.py采用彩云科技数据，心知为备用数据源
+autoreply_1.py采用彩云科技数据，心知为备用数据源（注意：最新版本可能会不稳定，如出现问题请使用autoreply.py）
 
 caiyun.py为定时发送
 
